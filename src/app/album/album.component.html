@@ -1,0 +1,8 @@
+<div>
+    <ng-container>
+        <button *ngFor="let a of newestAlbums" (click)="showImages(a.albumId)">Album: {{a.albumId}}</button>
+    </ng-container>
+   <div *ngIf="images">
+       <img class="img-border" *ngFor="let i of images" [src]="i.url">
+   </div>
+</div>
